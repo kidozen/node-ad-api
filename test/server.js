@@ -14,7 +14,7 @@ server.bind('cn=root', function(req, res, next) {
 });
 
 server.search('o=foo', function(req, res, next) {
-    res.send({dn:"o=foo", attributes: []});
+    res.send({dn:"o=foo", attributes: { bar: ["baz"]}});
 	res.end();
 	return next();
 });

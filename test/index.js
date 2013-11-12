@@ -140,6 +140,9 @@ describe("ldap", function () {
                         assert.ok(result);
                         assert.ok(result.entries[0]);
                         assert.equal("o=foo", result.entries[0].objectName);
+                        assert.ok(result.entries[0].attributes);
+                        assert.equal(1, result.entries[0].attributes.bar.length);
+                        assert.equal("baz", result.entries[0].attributes.bar[0]);
                         done();
                     });
                 });

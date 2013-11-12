@@ -185,7 +185,16 @@ var LDAP = function(settings) {
                     };
 
                     res.on('searchEntry', function (entry) {
-                        data.entries.push(entry.json);
+                        var entry = entry.json;
+                        var atts = {};
+                        if (entry.attributes && entry.attributes.length>0) {
+                            entry.attributes.forEach(function (att) {
+                                if (att.type && att.vals && att.vals.length>0) atts[att.type] = att.vals;
+                            });
+                        }
+
+                        entry.attributes = atts;
+                        data.entries.push(entry);
                     });
 
                     res.on('searchReference', function (ref) {

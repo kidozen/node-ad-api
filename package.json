@@ -1,6 +1,6 @@
 {
   "name": "ad-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kidozen's connector to query LDAP services.",
   "author": "Kidozen <support@kidozen.com>",
   "contributors": [ "Silvio Massari <silvio@kidozen.com>" ],
