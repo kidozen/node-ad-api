@@ -1,0 +1,22 @@
+{
+  "name": "ad-api",
+  "version": "0.0.1",
+  "description": "Kidozen's connector to query LDAP services.",
+  "author": "Kidozen <support@kidozen.com>",
+  "contributors": [ "Silvio Massari <silvio@kidozen.com>" ],
+  "main": "index.js",
+  "keywords": [ "LDAP", "AD" ],
+  "license": "MIT",
+  "dependencies": {
+    "ldapjs": "0.6.3",
+    "join": "2.3.0",
+    "node-uuid": "1.4.0",
+    "mem-cache": "0.0.2"
+  },
+  "devDependencies": {
+      "mocha": "1.11.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec test"
+  }
+}
